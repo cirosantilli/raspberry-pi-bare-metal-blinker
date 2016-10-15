@@ -11,6 +11,7 @@ sudo apt-get install binutils-arm-none-eabi gcc-arm-none-eabi
 
 # Generate kernel7.img
 arm-none-eabi-as start.S -o start.o
+# -nostdlib -nostartfiles -ffreestanding tell GCC not to use the C standard library.
 arm-none-eabi-gcc -Wall -Werror -O2 -nostdlib -nostartfiles -ffreestanding -c main.c -o main.o
 arm-none-eabi-ld start.o main.o -T ldscript -o main.elf
 # Get the raw assembly out of the generated elf file.
@@ -23,7 +24,9 @@ wget -O start.elf https://github.com/raspberrypi/firmware/blob/597c662a613df1144
 
 # Prepare the filesystem.
 sudo umount "$part_dev"
+# Create a partition table with a single partition.
 echo 'start=2048, type=c' | sudo sfdisk "$dev"
+# Create a filesystem in the partition.
 sudo mkfs.vfat "$part_dev"
 sudo mkdir -p "$mnt"
 sudo mount "${part_dev}" "$mnt"
