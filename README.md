@@ -17,6 +17,8 @@ Create a bare metal hello world blinker image that blinks the OK LED. Tested on 
 
 1.  Turn power off and on
 
+![demo.gif](demo.gif)
+
 There are many comprehensive bare metal resources out there, but it was hard to get the first example working.
 
 Making the first hello world easy is the only goal of this tutorial.
