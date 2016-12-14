@@ -24,3 +24,5 @@ There are many comprehensive bare metal resources out there, but it was hard to 
 Making the first hello world easy is the only goal of this tutorial.
 
 Adapted from: <https://github.com/dwelch67/raspberrypi>
+
+Also explained at: <http://stackoverflow.com/questions/29837892/running-a-c-program-with-no-os-on-raspberry-pi/40063032#40063032>
