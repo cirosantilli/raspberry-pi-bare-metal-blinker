@@ -7,7 +7,11 @@
 
 int main( void ) {
     uint32_t i;
-    /* At the low level, everything is done by writing to magic memory addresses. */
+    /* At the low level, everything is done by writing to magic memory addresses.
+     *
+     * The device tree files (dtb / dts), which are provided by hardware vendors,
+     * tell the Linux kernel about those magic values.
+     */
     volatile uint32_t * const GPFSEL4 = (uint32_t *)0x3F200010;
     volatile uint32_t * const GPFSEL3 = (uint32_t *)0x3F20000C;
     volatile uint32_t * const GPSET1  = (uint32_t *)0x3F200020;
