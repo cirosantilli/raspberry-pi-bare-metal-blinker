@@ -1,6 +1,6 @@
 # Raspberry Pi Bare Metal Blinker
 
-Create a bare metal hello world blinker image that blinks the OK LED. Tested on Ubuntu 16.04 host, Raspberry Pi 2. Usage:
+Run one command, get a bare metal hello world blinker image that blinks the OK LED. Tested on Ubuntu 16.04 host, Raspberry Pi 2. Usage:
 
 1.  Insert SD card on host
 
