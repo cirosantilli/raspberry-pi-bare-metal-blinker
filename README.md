@@ -19,10 +19,8 @@ Run one command, get a bare metal hello world blinker image that blinks the OK L
 
 ![demo.gif](demo.gif)
 
-There are many comprehensive bare metal resources out there, but it was hard to get the first example working.
+There are many comprehensive bare metal resources out there, but it was hard to get the first example working, because you have to download some random blobs and put them together.
 
-Making the first hello world easy is the only goal of this tutorial.
-
-Adapted from: <https://github.com/dwelch67/raspberrypi>
+Making the first hello world easy is the only goal of this tutorial. The blinker code was adapted from: <https://github.com/dwelch67/raspberrypi> which was the most comprehensive Raspberry Pi bare metal resource available at the time.
 
 Also explained at: <http://stackoverflow.com/questions/29837892/running-a-c-program-with-no-os-on-raspberry-pi/40063032#40063032>
