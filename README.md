@@ -23,4 +23,7 @@ There are many comprehensive bare metal resources out there, but it was hard to 
 
 Making the first hello world easy is the only goal of this tutorial. The blinker code was adapted from: <https://github.com/dwelch67/raspberrypi> which was the most comprehensive Raspberry Pi bare metal resource available at the time.
 
-Also explained at: <http://stackoverflow.com/questions/29837892/running-a-c-program-with-no-os-on-raspberry-pi/40063032#40063032>
+Also explained at:
+
+- <http://stackoverflow.com/questions/29837892/running-a-c-program-with-no-os-on-raspberry-pi/40063032#40063032>
+- <https://raspberrypi.stackexchange.com/questions/542/using-raspberry-pi-without-a-linux-os/56372#56372>
