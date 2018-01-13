@@ -9,7 +9,7 @@ mnt='/mnt/rpi'
 
 sudo apt-get install binutils-arm-none-eabi gcc-arm-none-eabi
 
-# Generate kernel7.img
+# Generate kernel7.img, which is the image with our code.
 arm-none-eabi-as start.S -o start.o
 # -nostdlib -nostartfiles -ffreestanding tell GCC not to use the C standard library.
 arm-none-eabi-gcc -Wall -Werror -O2 -nostdlib -nostartfiles -ffreestanding -c main.c -o main.o
@@ -25,6 +25,7 @@ wget -O start.elf https://github.com/raspberrypi/firmware/blob/597c662a613df1144
 # Prepare the filesystem.
 sudo umount "$part_dev"
 # Create a partition table with a single partition.
+# https://superuser.com/questions/332252/creating-and-formating-a-partition-using-a-bash-script/1132834#1132834
 echo 'start=2048, type=c' | sudo sfdisk "$dev"
 # Create a filesystem in the partition.
 sudo mkfs.vfat "$part_dev"
