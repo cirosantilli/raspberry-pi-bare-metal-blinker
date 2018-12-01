@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -eu
 
 dev="${1:-/dev/mmcblk0}"
 part="${2:-p1}"
@@ -23,7 +23,7 @@ wget -O bootcode.bin https://github.com/raspberrypi/firmware/blob/597c662a613df1
 wget -O start.elf https://github.com/raspberrypi/firmware/blob/597c662a613df1144a6bc43e5f4505d83bd748ca/boot/start.elf?raw=true
 
 # Prepare the filesystem.
-sudo umount "$part_dev"
+sudo umount "$part_dev" || true
 # Create a partition table with a single partition.
 # https://superuser.com/questions/332252/creating-and-formating-a-partition-using-a-bash-script/1132834#1132834
 echo 'start=2048, type=c' | sudo sfdisk "$dev"

@@ -6,12 +6,12 @@ Run one command, get a bare metal hello world blinker image that blinks the OK L
 
 1.  Make the image:
 
-        ./make.sh /dev/mmblck0 p1
+        ./make.sh /dev/mmcblk0 p1
 
     Where:
 
-    - `/dev/mmblck0` is the device of the SD card
-    - `p1` is the first partition of the device (`/dev/mmblck0p1`)
+    - `/dev/mmcblk0` is the device of the SD card
+    - `p1` is the first partition of the device (`/dev/mmcblk0p1`)
 
 1.  Inset SD card on PI
 
